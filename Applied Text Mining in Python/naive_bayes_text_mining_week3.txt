@@ -1,0 +1,47 @@
+# naive_bayes
+from sklearn import naive_bayes
+clfrNB = naive_bayes.MultinomialNB()
+clfrNB.fit(train_data, train_labels)
+predicted_labels = clfrNB.predict(test_data)
+f1_score(test_labels, predicted_labels, average = 'micro')
+
+# SVM
+
+from sklearn import svm
+clfrSVM = svm.SVC(kernel='linear', C=0.1)
+clfrSVM.fit(train_data, train_labels)
+predict_labels = clfrSVM.predict(test_data)
+
+# cross validation
+predicted_labels = model_selection.cross_val_predict(clfrSVM, train_data, train_labels, cv=5)
+
+
+# supervised Text classification in NLTK
+- NaiveBayesClassifier
+- DecisionTreeClassifier
+- ConditionalExponentialClassifier
+- MaxentClassifier
+- WekaClassifier
+- SklearnClassifier
+
+
+# nltk naivebayesclassifier
+
+from nltk.classify import NaiveBayesClassifier
+calssifier = NaiveBayesClassifier.train(train_set)
+classifier.classify(unbalanced_instance)
+classifier.classify_many(unlabeled_instances)
+nltk.classify.util.accuracy(classifier, test_set)
+
+classifier.labels()
+classifier.show_most_informative_features()
+
+
+# nltk sklearnclassifier
+from nltk.classify import SKlernClassifier
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.svm import SVC
+
+clfrNB = SKlearnClassifier(MultinomialNB()).train(train_set)
+clfrSVM = SKlearnClassifier(SVC(), kernel = 'linear').train(train_set)
+
