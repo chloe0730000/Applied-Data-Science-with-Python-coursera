@@ -1,4 +1,4 @@
-# Applied Machine Learning in Python From University of Michigan
+## Applied Machine Learning in Python From University of Michigan
 
 * Course List (Done)
   * Introduction to Data Science in Python
